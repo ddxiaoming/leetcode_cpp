@@ -1,4 +1,6 @@
 CMAKE_MINIMUM_REQUIRED(VERSION 3.16)
-PROJECT(LEETCODE-CPP)
+PROJECT(leetcode-cpp)
 ADD_EXECUTABLE(leetcode main.cpp)
 ADD_EXECUTABLE(leetcode581 leetcode581.cpp)
+ADD_EXECUTABLE(leetcode860 leetcode860.cpp)
+ADD_EXECUTABLE(leetcode561 leetcode561.cpp)
