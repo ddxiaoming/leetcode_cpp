@@ -16,18 +16,9 @@ void print_exit_reason(int status) {
     }
 }
 int main() {
-    pid_t fpid = fork();
-    if (fpid < 0) {
-        cout << "fork失败" << endl;
-    } else if (fpid == 0) {
-        // 子进程
-        cout << "子进程：" << getpid() << endl;
-        sleep(5);
-    } else {
-        // 父进程
-        int status;
-        cout << "子进程：" << wait(&status) << "结束" << endl;
-        print_exit_reason(status);
+    int ret = setuid(0);
+    if (ret < 0) {
+        cout << "error" << endl;
     }
     return 0;
 }
