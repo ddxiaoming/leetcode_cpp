@@ -7,6 +7,7 @@
 #include <iostream>
 using namespace std;
 void print_exit_reason(int status) {
+
     if (WIFEXITED(status)) {
         cout << "正常终止，退出状态为：" << WEXITSTATUS(status) << endl;
     } else if (WIFSIGNALED(status)) {
