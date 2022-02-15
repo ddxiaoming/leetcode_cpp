@@ -2,18 +2,23 @@
 // Created by lemon on 2022/2/8.
 //
 #include <iostream>
-#include <sstream>
-#include <cctype>
+#include <fstream>
+#include <unistd.h>
+#include <csignal>
 using namespace std;
-int main() {
-    const int a = 10;
-    const int *b = &a;
-    string s, word;
-    getline(cin, s);
-    istringstream iss(s);
-    while (iss >> word) {
-        for (char &c : word) c = static_cast<char>(toupper(c));
-        cout << word << endl;
+int main(int argc, char* argv[]) {
+
+    ifstream ifs(argv[1]);
+    string line;
+    signal(SIGALRM, [](int) -> void {
+        alarm(1);
+    });
+    alarm(1);
+    
+    while (getline(ifs, line)) {
+        cout << line << endl;
+        pause();
     }
+    ifs.close();
     return 0;
 }
