@@ -10,8 +10,8 @@ using namespace std;
 class Solution {
 public:
     int findContentChildren(vector<int>& g, vector<int>& s) {
-        sort(g.begin(), g.end(), greater<int>());
-        sort(s.begin(), s.end(), greater<int>());
+        sort(g.begin(), g.end(), greater<>());
+        sort(s.begin(), s.end(), greater<>());
         int g_sz = static_cast<int>(g.size()), s_sz = static_cast<int>(s.size());
         int res = 0, i = 0, j = 0;
         while (i < g_sz && j < s_sz) {
