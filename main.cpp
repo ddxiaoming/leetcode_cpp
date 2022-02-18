@@ -1,24 +1,23 @@
 //
 // Created by lemon on 2022/2/8.
 //
-#include <iostream>
-#include <fstream>
-#include <unistd.h>
-#include <csignal>
-using namespace std;
-int main(int argc, char* argv[]) {
-
-    ifstream ifs(argv[1]);
-    string line;
-    signal(SIGALRM, [](int) -> void {
-        alarm(1);
-    });
-    alarm(1);
-    
-    while (getline(ifs, line)) {
-        cout << line << endl;
-        pause();
+#include <string>
+#include <vector>
+template <typename T> std::vector<T> uniqueInOrder(const std::vector<T>& iterable){
+    std::vector<T> res;
+    for (auto i = 0; i < iterable.size(); ++i) {
+        if (i == 0 || iterable[i] != iterable[i - 1]) res.push_back(iterable[i]);
     }
-    ifs.close();
+    return res;
+}
+std::vector<char> uniqueInOrder(const std::string& iterable){
+    std::vector<char> res;
+    for (auto i = 0; i < iterable.size(); ++i) {
+        if (i == 0 || iterable[i] != iterable[i - 1]) res.push_back(iterable[i]);
+    }
+    return res;
+}
+
+int main() {
     return 0;
 }
