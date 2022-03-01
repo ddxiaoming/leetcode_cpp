@@ -8,7 +8,6 @@ class Solution {
 public:
     bool validPalindrome(string s) {
         int left = 0, right = static_cast<int>(s.size()) - 1;
-        bool neq = false;
         while (left < right) {
             if (s[left] != s[right]) {
                 return isPalindrome(s, left + 1, right)
