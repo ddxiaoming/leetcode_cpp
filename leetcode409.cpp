@@ -1,9 +1,4 @@
-//
-// Created by lemon on 2022/2/15.
-//
-
 #include <iostream>
-#include <vector>
 #include <unordered_map>
 using namespace std;
 class Solution {

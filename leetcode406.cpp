@@ -1,6 +1,3 @@
-//
-// Created by lemon on 2022/2/22.
-//
 #include <vector>
 #include <algorithm>
 using namespace std;

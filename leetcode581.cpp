@@ -11,7 +11,7 @@ class Solution {
 public:
     int findUnsortedSubarray(vector<int>& nums) {
         vector<int> ori(nums.cbegin(), nums.cend());
-        sort(nums.begin(), nums.end(), less<int>());
+        sort(nums.begin(), nums.end(), less<>());
         int sz = static_cast<int>(nums.size()), left = 0, right = sz - 1;
         while (left <= right && nums[left] == ori[left]) ++left;
         while (left <= right && nums[right] == ori[right]) --right;

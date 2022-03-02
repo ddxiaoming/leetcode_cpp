@@ -1,12 +1,9 @@
-//
-// Created by lemon on 2022/2/11.
-//
 #include <iostream>
 using namespace std;
 class Solution {
 public:
     string removeKdigits(string num, int k) {
-        string res{""};
+        string res;
         for (const char c : num) {
             while (k > 0 && !res.empty() && res.back() > c) {
                 res.pop_back();
