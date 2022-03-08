@@ -40,5 +40,5 @@ add_executable(leetcode283 leetcode283.cpp)
 add_executable(leetcode15 leetcode15.cpp)
 add_executable(leetcode28 leetcode28.cpp)
 add_executable(leetcode42 leetcode42.cpp)
-
 add_executable(leetcode344 leetcode344.cpp)
+add_executable(leetcode2055 leetcode2055.cpp)
