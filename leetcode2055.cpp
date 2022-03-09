@@ -1,5 +1,7 @@
 #include <iostream>
 #include <vector>
+#include <gnu/libc-version.h>
+#include <list>
 using namespace std;
 
 class Solution {
