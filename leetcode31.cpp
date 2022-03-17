@@ -6,15 +6,13 @@ using namespace std;
 class Solution {
 public:
     void nextPermutation(vector<int>& nums) {
-        int sz = static_cast<int>(nums.size());
-        if (sz == 1) return;
-        for (int i = sz - 2; i >= 0; --i) {
-            if (nums[i] < nums[i + 1]) {
-                swap(nums[i], nums[i + 1]);
-                return;
-            }
+        int sz = static_cast<int>(nums.size()), smallIdx = sz - 2, bigIdx = sz - 1;
+        while (smallIdx >= 0 && nums[smallIdx] >= nums[smallIdx + 1]) --smallIdx;
+        if (smallIdx >= 0) {
+            while (bigIdx >= 0 && nums[smallIdx] >= nums[bigIdx]) --bigIdx;
+            swap(nums[smallIdx], nums[bigIdx]);
         }
-        reverse(nums.begin(), nums.end());
+        reverse(nums.begin() + smallIdx + 1, nums.end());
     }
 };
 
