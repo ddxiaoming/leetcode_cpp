@@ -32,3 +32,6 @@ public:
         head = dumpy->next;
     }
 };
+int main(int argc, char **argv) {
+
+}
