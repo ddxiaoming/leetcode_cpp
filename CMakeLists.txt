@@ -72,3 +72,4 @@ add_executable(leetcode704 leetcode704.cpp)
 add_executable(leetcode374 leetcode374.cpp)
 
 add_executable(leetcode852 二分/leetcode852.cpp)
+add_executable(leetcode367 二分/leetcode367.cpp)
